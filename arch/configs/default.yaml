@@ -1,0 +1,85 @@
+# =========================
+# Experiment
+# =========================
+experiment:
+  name: model_baseline
+  output_dir: outputs
+  seed: 42
+  deterministic: false
+  resume: ""            # checkpoint path, e.g. outputs/ckpt_last.pth
+  use_ema: false
+  ema_decay: 0.999
+
+# =========================
+# Data
+# =========================
+data:
+  dataset: dummy        # dummy / your_dataset_name
+  data_root: ""         
+  num_classes: 10
+  image_size: 224
+  num_workers: 4
+  pin_memory: true
+
+# =========================
+# Model
+# =========================
+model:
+  name: Model
+  in_channels: 3
+  embed_dim: 256
+  depth: 4
+  num_heads: 8
+  use_fusion: false   
+  dropout: 0.0
+  attn_dropout: 0.0
+
+# =========================
+# Training
+# =========================
+train:
+  epochs: 100
+  batch_size: 32
+  device: auto          # auto / cpu / cuda
+  amp: true             # Automatic Mixed Precision
+  log_interval: 50
+  save_interval: 1
+
+# =========================
+# Optimizer
+# =========================
+optimizer:
+  name: adamw
+  lr: 0.0003
+  weight_decay: 0.05
+  betas: [0.9, 0.999]
+
+# =========================
+# LR Scheduler
+# =========================
+scheduler:
+  name: cosine
+  warmup_epochs: 5
+  min_lr: 0.000001
+
+# =========================
+# Loss
+# =========================
+loss:
+  name: label_smoothing_ce
+  smoothing: 0.1
+
+# =========================
+# Evaluation
+# =========================
+eval:
+  batch_size: 64
+  topk: [1, 5]
+  save_json: true
+
+# =========================
+# Logging
+# =========================
+logging:
+  use_tensorboard: true
+  jsonl: true
