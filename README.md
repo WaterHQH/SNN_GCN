@@ -3,6 +3,8 @@
 This repository provides a **PyTorch implementation of the model proposed in our paper**  
 > *[Label Distribution Learning via Implicit Distribution Representation]*
 
+# model_arch
+<img width="693" height="531" alt="image" src="https://github.com/user-attachments/assets/31be7238-80a7-4b0f-848c-c4617f76155f" />
 
 ---
 
@@ -34,4 +36,5 @@ model_pytorch/
 ├── evaluate.py              # Evaluation script
 ├── requirements.txt
 └── README.md
+
 
