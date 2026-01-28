@@ -3,7 +3,6 @@
 This repository provides a **PyTorch implementation of the model proposed in our paper**  
 > *[Label Distribution Learning via Implicit Distribution Representation]*
 
-The code is organized in a **clean, modular, and reproducible** manner, following common practices in recent top-tier conference implementations (CVPR / ICCV / NeurIPS / ICLR).
 
 ---
 
@@ -35,3 +34,4 @@ model_pytorch/
 ├── evaluate.py              # Evaluation script
 ├── requirements.txt
 └── README.md
+
